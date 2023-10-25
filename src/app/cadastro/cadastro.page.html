@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button default-href="#"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Voltar</ion-title>
+    </ion-toolbar>
+    
+    <ion-title>Agendar</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">cadastro</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list lines="full">
+    <ion-item>
+      <ion-label>Matéria</ion-label>
+      <ion-input [(ngModel)]="materia"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Descrição</ion-label>
+      <ion-input [(ngModel)]="descricao"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>DataHora</ion-label>
+
+          <ion-datetime [showDefaultButtons]="true" [(ngModel)]="datahora"></ion-datetime>
+
+        </ion-item>
+      </ion-list>
+  <ion-button expand="full" (click)="salvar()">Salvar</ion-button>
+</ion-content>
