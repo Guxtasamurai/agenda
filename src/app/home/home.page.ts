@@ -12,8 +12,11 @@ export class HomePage {
   constructor(
     public localstorage_service:LocalStorageService
   ) {
-    this.compromissos = this.localstorage_service.get('compromisso');
+    
   }
+ionViewWillEnter(){
+  this.compromissos = this.localstorage_service.get('compromisso');
+}
 
   excluir(indice:number) {
     this.compromissos.splice(indice,1);

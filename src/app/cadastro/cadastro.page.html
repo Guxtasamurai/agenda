@@ -21,6 +21,7 @@
 
   <ion-list lines="full">
     <ion-item>
+
       <ion-label>Matéria</ion-label>
       <ion-input [(ngModel)]="materia"></ion-input>
     </ion-item>
@@ -29,9 +30,11 @@
       <ion-input [(ngModel)]="descricao"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label>DataHora</ion-label>
 
-          <ion-datetime [showDefaultButtons]="true" [(ngModel)]="datahora"></ion-datetime>
+
+          <ion-datetime 
+          locate="pt-Br" 
+          [showDefaultButtons]="true" [(ngModel)]="datahora"></ion-datetime>
 
         </ion-item>
       </ion-list>
