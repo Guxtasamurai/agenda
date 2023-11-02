@@ -30,16 +30,17 @@ ionViewWillEnter(){
 
   }
 
-  getHora(data:string){ //Aqui estamos pegando a hora que será exibida na tela, separando-a da data.
-    let hora = data.split("T")[1];
+  getHora(_hora:string){ //Aqui estamos pegando a hora que será exibida na tela, separando-a da data.
+    let hora = _hora.split("T")[1];
     return hora;
   }
-    getData(data:string){ //Aqui estamos pegando a data que será exibida na tela, separando-a da data.
+
+  getData(data:string){ //Aqui estamos pegando a data que será exibida na tela, separando-a da data.
       let dt = data.split("T")[0];
-      let dia = dt.split('/')[2];
-      let mes = dt.split('/')[1];
-      let ano = dt.split('/')[0];
+      let dia = dt.split('-')[2];
+      let mes = dt.split('-')[1];
+      let ano = dt.split('-')[0];
 
       return dia + '/' + mes + '/' + ano;
-  }
+  }  
 }
